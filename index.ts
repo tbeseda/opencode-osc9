@@ -43,7 +43,7 @@ export const OpencodeOsc9: Plugin = async ({client}) => {
           await notify("session idle", client.app.log)
           break
         // @ts-expect-error - types lag
-        case "permission.ask": {
+        case "permission.asked": {
           // @ts-expect-error - types lag
           const perm = (properties?.permission as string | undefined) ?? "unknown"
           await notify(`needs approval: ${perm}`, client.app.log)
