@@ -1,6 +1,6 @@
 {
   "name": "opencode-osc9",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "opencode plugin to send system notification via OSC 9",
   "author": "tbeseda",
   "license": "MIT",
