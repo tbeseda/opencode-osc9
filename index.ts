@@ -1,7 +1,8 @@
 import { closeSync, openSync, writeSync } from "fs"
 import type { Plugin } from "@opencode-ai/plugin" // these types tend to lag behind actual capabilities
 
-// OSC 9 generally takes a single string. Strip control bytes and cap length to keep notifications sane
+// OSC 9 takes a single string.
+// Strip control bytes and cap length to keep notifications sane.
 function osc9(text: string): string {
   const safe = text.replace(/[\x00-\x1f\x7f]/g, " ").slice(0, 256)
   return `\x1b]9;${safe}\x1b\\`
